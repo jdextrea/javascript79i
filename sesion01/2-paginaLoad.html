@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina 2</title>
+    <script>
+                function inicializar() {
+            document.getElementById("caja3").style.color="red";
+            
+        }
+
+        function inicializarAno () {
+            let anio = new Date().getFullYear();
+            document.getElementById('anio').value=anio;
+
+        }
+        //AddEventolistener ir asociando eventos
+        
+        //Se cargo todo su contenido y todos los archicos externos, cuando la pagina 
+        //acaba de inicializar.
+        window.addEventListener('load',inicializar);
+
+    </script>
+</head>
+<body>
+    
+   <p id="caja">Uso de JavaScript</p>
+   <p id="caja2">Uso de HTML</p>
+   <p id="caja3">Uso de CSS</p>
+   <script>
+            document.getElementById("caja2").style.color="blue";
+            document.getElementById("caja").style.fontSize="2em";
+    
+   </script>
+</body>
+</html>

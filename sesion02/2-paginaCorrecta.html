@@ -5,8 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        function elegirColor() {
+            //calcular el indice
+            let indice = document.getElementById('color').options.selectedIndex;
+            //Calcular el valor de la lista seleccionada.
+            let valor = document.getElementById('color').options[indice].text;
+            //Obtener el valor de cada lista
+            let color = document.getElementById('color').options[indice].value;
+            
+            switch(indice) {
+
+                case 1:
+                    document.bgColor=color;
+                break;
+                case 2:
+                    document.bgColor=color;
+                break;
+                case 3:
+                    document.bgColor=color;
+                break;
+                default:
+                    alert("seleccionar opcion correcta");
+                break;
+            }
+
+        }
+    </script>
 </head>
 <body>
     Bienvenido al sistema
+    <form name="form">
+        <select id="color" onchange="elegirColor();">
+            <option value="0">Seleccionar color</option>
+            <option value="blue">Azul</option>
+            <option value="red">Rojo</option>
+            <option value="green">Verde</option>
+        </select>
+    </form>
 </body>
 </html>

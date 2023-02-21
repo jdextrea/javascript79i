@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de Ingreso</title>
+    <script>
+        //Crear una pagina que permita validar credenciales
+        function inicializar() {
+            document.getElementById('validar').addEventListener('click',validarCredenciales);
+            
+        }
+        function validarCredenciales() {
+            //Obtener los valores
+           let user = document.getElementById('user').value;
+           let clave = document.getElementById('clave').value;
+           //PReguntar si es validar
+          if (user=="jdextre"  && clave=="2468") 
+            {
+                window.location="2-paginaCorrecta.html";
+            } else {
+                window.location="2-paginaError.html"
+           }
+            
+        }
+        window.addEventListener('load',inicializar);
+    </script>
+</head>
+<body>Ingresar al sistema <br />
+    <form name="form">
+       Usuario <input type="text" id="user" placeholder="Ingresar Usuario" /><br />
+       Clave <input type="password" id="clave"  /> <br />
+        <input type="button" id="validar" value="Acceder" />
+    </form>
+</body>
+</html>

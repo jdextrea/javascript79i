@@ -12,11 +12,17 @@
            let anio = new Date().getFullYear();
         document.getElementById('anio').value=anio;
         }
+
+        function saludar() {
+            let mensaje = document.getElementById('anio').value;
+            alert(mensaje);
+        }
+
     window.addEventListener('load',inicializar);
     </script>
 </head>
 <body>
-
-    Año <input type="text" id="anio">
+    Año 1 <input type="text" id="anio">
+    Año 2 <input type="text" id="anio2" onclick="saludar();">
 </body>
 </html>

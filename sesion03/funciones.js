@@ -3,8 +3,10 @@ function validar() {
     let correo = document.getElementById('correo').value;
     if (correo==null || correo.length==0 ) {
     //alert('Faltan datos');
-    document.getElementById('correo').style.borderColor="red";
-    
+    //document.getElementById('correo').style.borderColor="red";
+    document.getElementById('texto').innerHTML="Ingresar nombre";
+    document.getElementById('texto').style.color="red";
+    document.getElementById('correo').focus();
     return false;
     } 
 

@@ -1,3 +1,6 @@
+
+
+
 function validar() {
     //1ra Validar si un campo tiene datos
     let correo = document.getElementById('correo').value;

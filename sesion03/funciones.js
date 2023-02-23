@@ -2,8 +2,10 @@ function validar() {
     //1ra Validar si un campo tiene datos
     let correo = document.getElementById('correo').value;
     if (correo==null || correo.length==0 ) {
-    alert('Faltan datos');
-        return false;
+    //alert('Faltan datos');
+    document.getElementById('correo').style.borderColor="red";
+    
+    return false;
     } 
 
     //2. Validar si un numero 

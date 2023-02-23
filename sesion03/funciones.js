@@ -1,4 +1,15 @@
+function validateEmail() {
+    let correo = document.getElementById('correo');
+    let validarCorreo =  /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
 
+    if (validarCorreo.test(correo.value)) {
+        alert('Correo valido');
+
+    } else {
+
+        alert ('Correo invalido');
+    }
+}
 
 
 function validar() {

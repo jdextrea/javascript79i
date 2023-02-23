@@ -35,6 +35,7 @@ function elegirColor() {
         break;
         case 2:
             document.bgColor=color;
+            document.append("hol");
         break;
         case 3:
             document.bgColor=color;

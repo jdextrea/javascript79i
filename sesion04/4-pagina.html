@@ -18,14 +18,43 @@
         $(document).ready(function() {
             $("#btn3").click(function(evento) {
                 $('#caja').html('Agregando contenido dinamico');
+                $("p").hide();
+            }); //Cierra la function evento 
+
+        });//Cierra la funcion principal
+
+        //Programa 5
+        $(document).ready(function() {
+        $("#caja").mouseenter(function(evento) {
+            $('#mensaje').css("display","block");
 
             }); //Cierra la function evento 
 
         });//Cierra la funcion principal
+
+        $(document).ready(function() {
+        $("#caja").mouseleave(function(evento) {
+            $('#mensaje').css("display","none");
+
+        }); //Cierra la function evento 
+
+        });//Cierra la funcion principal
+
+        //Programa 6 -> Ejecutar el evento focus
+        $(document).ready(function(){
+            $("#texto").focus(function(){
+                $(this).css("background-color", "#cccccc");
+            });
+            $("#texto").blur(function(){
+                $(this).css("background-color", "#ffffff");
+            });
+        });
+
     </script>
 </head>
 <body>
     <div id="caja">Hola Mundo</div>
+    
 <!-- Programa 02 -> Crear dos botones que escriban texto en la caja
     Programa 03-> Agregar texto a una caja utilizando append
     !-->
@@ -33,6 +62,14 @@
     <input type="button" value="Botor 2" onclick="$('#caja').append(', estoy enseñando JavaScript')" />
     
     <input type="button" id="btn3" value="Botor 3" />
+    <p>Utilizando parrafos</p>
+    <p>Otro parrafo</p>
+    <!--Programa 04 trabajar con los eventos mouseenter, mouseleave-->
+    <div id="mensaje"><img src="https://www.certus.edu.pe/blog/wp-content/uploads/2020/02/certus-log.png" ></div>
     
+    <!--Programa 06-->
+    <input type="text" id="texto">correo <br />
+    <input type="text"id="texto">clave
+     
 </body>
 </html>

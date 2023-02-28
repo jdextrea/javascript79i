@@ -1,12 +1,12 @@
 //Crear un programa que brinde formato solo a los tipos text
 $("input").focus(function () {
 
-    $("[type='text'").css({"background":"red"})
+    $("[type='text']").css({"background":"red"})
 });
 
 $("input").blur(function () {
 
-    $("[type='text'").css({"background":"green"})
+    $("[type='text']").css({"background":"green"})
 });
 
 
@@ -30,11 +30,14 @@ $("#boton3").click(function() {
 });
 
 
-//Programa para agregar texto
+//Programa para agregar efectos
 $("#boton4").click(function() {
 
         $("#c2").toggle();
-
+ //       $("#c2").toggle("slow");
+       // $("#c2").toggle("fast");
+       $("#c2").toggle(2000);
+       //     
 });
 
 

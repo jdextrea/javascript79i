@@ -19,7 +19,22 @@ $("#userid").blur(function () {
 $("#boton3").click(function() {
 
     //Agregar un contenido antes
-    $("#c1").before('Tomando ');
+    //$("#c1").before('Tomando ');
+
+    //Agregar un contenido despues
+   // $("#c1").after(' de JavaScript ');
+ 
+    //Agregar un contenido antes del texto escrito
+        $("#c1").prepend(' Tomando ');
 
 });
+
+
+//Programa para agregar texto
+$("#boton4").click(function() {
+
+        $("#c2").toggle();
+
+});
+
 

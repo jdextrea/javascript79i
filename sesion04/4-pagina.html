@@ -7,13 +7,32 @@
     <title>Document</title>
     <script src="js/jquery-3.6.3.min.js"></script>
     <script>
+        //ready ejecuta despues que el DOM este listo
+        //Programa 01 -> Al cargar la pagina poner de color red una caja
         $(document).ready(function() {
             $('#caja').css("background-color","red");
 
         });
+
+        //Programa 04 -> Agregar a una caja de texto contenido.
+        $(document).ready(function() {
+            $("#btn3").click(function(evento) {
+                $('#caja').html('Agregando contenido dinamico');
+
+            }); //Cierra la function evento 
+
+        });//Cierra la funcion principal
     </script>
 </head>
 <body>
     <div id="caja">Hola Mundo</div>
+<!-- Programa 02 -> Crear dos botones que escriban texto en la caja
+    Programa 03-> Agregar texto a una caja utilizando append
+    !-->
+    <input type="button" value="Botor 1" onclick="$('#caja').html('Hola soy Jymmy Dextre')" />
+    <input type="button" value="Botor 2" onclick="$('#caja').append(', estoy enseñando JavaScript')" />
+    
+    <input type="button" id="btn3" value="Botor 3" />
+    
 </body>
 </html>

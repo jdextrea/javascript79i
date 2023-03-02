@@ -105,10 +105,14 @@
                                 <option  value="L">L</option>
                                 <option  value="XL">XL</option>
                             </select>
+                            <div class="invalid-feedback">Debe elergir solo una talla</div>
                         </div>
                         <div class="form-group col-md-2">
                             <label for="inputStock">Stock</label>
                             <input type="number" class="form-control" id="inputStock" name="inputStock" required>
+                            <div class="invalid-feedback">
+                                El stock solo permite numeros
+                            </div>
                         </div>
                         <div class="form-group col-md-4">
                             <label for="inputImagen">Imágen</label>
@@ -116,6 +120,7 @@
                                 <input type="file" class="custom-file-input" id="customFileLang" lang="es">
                                 <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
                               </div>
+                              <div class="invalid-feedback">Debe elegir una imagen</div>
                         </div>
                     </div>
                     <button class="btn btn-primary float-right"><i class="fa fa-save"></i> Grabar</button>

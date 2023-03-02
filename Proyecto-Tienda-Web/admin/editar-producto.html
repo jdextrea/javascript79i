@@ -62,25 +62,41 @@
                         <div class="form-group col-md-6">
                             <label for="inputModelo">Modelo</label>
                             <input type="text" class="form-control" id="inputModelo" name="inputModelo" value="129202" required>
+                            <div class="invalid-feedback">
+                                El modelo solo permite 6 digitos
+                            </div>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="inputProducto">Nombre Producto</label>
                         <input type="text" class="form-control" id="inputProducto" name="inputProducto" value="POLO TIPO CUELLO" required>
+                        <div class="invalid-feedback">
+                            El nombre producto debe ser entre 4 a 40 digitos
+                        </div>    
                     </div>
                     <div class="form-group">
                         <label for="inputDetalle">Detalle Producto</label>
                         <input type="text" class="form-control" id="inputDetalle" name="inputDetalle" value="Polo confeccionado en tejido de algodón con estructura piqué. Cuello mao 
                         y manga corta acabada en rib. Bajo con aberturas laterales. Cierre frontal con botones." required>
+                        <div class="invalid-feedback">
+                            El detalle producto tiene que ser entre 10 a 100 digitos
+                        </div>
                     </div>
+                    
                     <div class="form-row">
                         <div class="form-group col-md-2">
                             <label for="inputPeso">Peso</label>
                             <input type="number" class="form-control" id="inputPeso" name="inputPeso" value="3" required>
+                            <div class="invalid-feedback">
+                                El peso solo permite numeros
+                            </div>
                         </div>
                         <div class="form-group col-md-2">
                             <label for="inputMaterial">Material</label>
                             <input type="text" class="form-control" id="inputMaterial" name="inputMaterial" value="40% poliéster" required>
+                            <div class="invalid-feedback">
+                                El material solo permite 15 digitos
+                            </div>
                         </div>
                         <div class="form-group col-md-2">
                             <label for="inputTalla">Talla</label>
@@ -91,10 +107,14 @@
                                 <option  value="L">L</option>
                                 <option  value="XL">XL</option>
                             </select>
+                            <div class="invalid-feedback">Debe elergir solo una talla</div>
                         </div>
                         <div class="form-group col-md-2">
                             <label for="inputStock">Stock</label>
                             <input type="number" class="form-control" id="inputStock" name="inputStock" value="120" required>
+                            <div class="invalid-feedback">
+                                El stock solo permite numeros
+                            </div>        
                         </div>
                         <div class="form-group col-md-4">
                             <label for="inputImagen">Imágen</label>
@@ -102,6 +122,7 @@
                                 <input type="file" class="custom-file-input" id="customFileLang" lang="es">
                                 <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
                               </div>
+                              <div class="invalid-feedback">Debe elegir una imagen</div>
                         </div>
                     </div>
                     <button class="btn btn-primary float-right"><i class="fa fa-save"></i> Grabar</button>

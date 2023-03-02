@@ -12,8 +12,8 @@ const expresiones = {
 }
 
 const campos = {
-    inputModelo: false,
     inputProducto: false,
+    inputModelo: false,
     inputDetalle: false,
     inputPeso: false,
     inputMaterial: false,
@@ -22,14 +22,14 @@ const campos = {
 }
 //Funciones Lambda
 const validarCampo = (expresion, input, campo) => {
-    if (expresion.test(input)) {
-        document.getElementById(´${campo}´).classList.add('is-valid');
-        document.getElementById(´${campo}´).classList.remove('is-valid');
+    if (expresion.test(input.value)) {
+        document.getElementById(`${campo}`).classList.add('is-valid');
+        document.getElementById(`${campo}`).classList.remove('is-invalid');
         campos[campo] = true;
     } else {
-        document.getElementById(´${campo}´).classList.add('is-invalid');
-        document.getElementById(´${campo}´).classList.remove('is-invalid');
-        campos[campo] = true;
+        document.getElementById(`${campo}`).classList.add('is-invalid');
+        document.getElementById(`${campo}`).classList.remove('is-valid');
+        campos[campo] = false;
     }
 }
 

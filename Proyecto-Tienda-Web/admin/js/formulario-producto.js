@@ -1,6 +1,8 @@
 const formulario = document.getElementById('formulario-producto');
 const inputs = document.querySelectorAll('#formulario-producto input');
-const selects = document.querySelectorAll('formulario-producto select');
+const selects = document.querySelectorAll('#formulario-producto select');
+const files = document.querySelectorAll('#formulario-producto file');
+
 
 const expresiones = {
     inputModelo: /^[0-9]{1,6}$/,
@@ -34,6 +36,7 @@ const validarCampo = (expresion, input, campo) => {
 }
 
    const validarFormulario = (e) => {
+        
         switch (e.target.name) {
             case "inputProducto":
                 validarCampo(expresiones.inputProducto,e.target,'inputProducto');
@@ -53,6 +56,27 @@ const validarCampo = (expresion, input, campo) => {
             case "inputStock":
                 validarCampo(expresiones.inputStock,e.target,'inputStock');
             break;
+            case "inputTalla":
+                if (e.target.value !==''){
+                    document.getElementById('inputTalla').classList.remove('is-invalid');
+                    document.getElementById('inputTalla').classList.add('is-valid');
+                } else {
+                    document.getElementById('inputTalla').classList.remove('is-valid');
+                    document.getElementById('inputTalla').classList.add('is-invalid');
+     
+                }
+            break;
+            case "inputImagen":
+                if (e.target.value !==''){
+                    document.getElementById('inputImagen').classList.remove('is-invalid');
+                    document.getElementById('inputImagen').classList.add('is-valid');
+                } else {
+                    document.getElementById('inputImagen').classList.remove('is-valid');
+                    document.getElementById('inputImagen').classList.add('is-invalid');
+     
+                }
+            break;
+    
         }
    } 
 
@@ -61,5 +85,15 @@ const validarCampo = (expresion, input, campo) => {
 inputs.forEach((input) => {
     input.addEventListener('keyup',validarFormulario);
     input.addEventListener('blur',validarFormulario);
+    
+});
+
+selects.forEach((select) => {
+    console.log(select);
+    select.addEventListener('blur',validarFormulario);
+});
+
+files.forEach((file) => {
+    file.addEventListener('blur',validarFormulario);
     
 });

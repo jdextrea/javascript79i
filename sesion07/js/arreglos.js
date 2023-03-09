@@ -15,4 +15,20 @@ for (let x=0;x<nroElementos;x++) {
 
 //Crear un programa que permita mostrar los paises en una sola fila
 //Peru Chile Brazil Ecuador
+
+//Invertir un arreglo de valores
 let paises = ["Peru","Chile","Brazil","Ecuador"];
+let paisFila = [];
+let nombrePaises = "";
+//nombrePaises = "Peru";
+//console.log(nombrePaises);
+//nombrePaises = nombrePaises + ", " + "Chile";
+//console.log(nombrePaises);
+for(let y=0 ; y<paises.length;y++) 
+    {
+     paisFila.unshift(paises[y]);
+        nombrePaises = nombrePaises  + " " + paises[y];
+    }
+
+    console.log(paisFila);
+    console.log(nombrePaises);

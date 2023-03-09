@@ -19,6 +19,8 @@ class Clientes {
 }
 
 //Paso 1 Instanciar una classe
+//Llama al evento constructor de la classe
+
 const objClientes = new Clientes();
 objClientes.nomCliente = "Jymmy";
 console.log(objClientes.nomCliente);

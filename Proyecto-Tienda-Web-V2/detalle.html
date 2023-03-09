@@ -5,7 +5,8 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="css/bootstrap.min.css" />
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  
+   <link rel="stylesheet" href="css/bootstrap.min.css" />
+      
    <title>detalle</title>
   </head>
   <body>
@@ -49,7 +50,7 @@
   </header> 
    <hr>
    <br>
-<form id="myForm" class="needs-validation" novalidate>
+   <form id="myForm" class="needs-validation" novalidate> 
    <main class="container">
       <div class="row">
          <div class="col-sm-12 col-md-12 col-lg-12">
@@ -57,7 +58,10 @@
             <div class="col-sm-5 col-md-5 col-lg-5">
                <div class="row">
                   <div class="col col-12">
-                     <img class="img-fluid mx-auto d-block" src="https://i.linio.com/p/0711a2f51316e22ea6ae083207f6c8f3-catalog.jpg" alt="Polo tipo cuello">
+                     <span class='zoom' id='producto1'>
+                     <img class="img-fluid mx-auto d-block" src="images/img_camisa_azul.png" 
+                     width="289" height="289" alt="Polo tipo cuello">
+                  </span>
                   </div>
                   <div class="col col-12">
                      <br>
@@ -117,14 +121,13 @@
                      </div>
                   </div>
                   <div class="col col-12 col-sm-12 col-md-6 col-lg-6 text-center">
-                     <input type="number" class="form-control" id="cantidad" value="1" required>
+                     <input type="number" class="form-control" min="1" id="cantidad" value="1" required>
                        <div class="valid-feedback"></div>
                        <div class="invalid-feedback">Debe indicar una cantidad valida</div> 
                   </div>
                   <div class="col col-12 mt-5">
-                     <a href="#" class="btn btn-lg btn-block btn-outline-primary" data-toggle="modal" data-target="#carritoModal" >Añadir al carrito</a>
+                     <button type="submit" id="btnSubmit" class="btn btn-lg btn-block btn-outline-primary" >Añadir al carrito</a>
                   </div>
-
                   <!-- Modal -->
                   <div class="modal fade" id="carritoModal" tabindex="-1" aria-labelledby="carritoModalLabel" aria-hidden="true">
                      <div class="modal-dialog modal-lg">
@@ -166,10 +169,30 @@
        
       </div>
    </main>
-</form>
+   </form>
 
    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" ></script>
    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" ></script>
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   <script src="scripts/jquery.zoom.min.js"></script>
+   <script>
+      $('#btnSubmit').click(function(event) {
+         let form = $('#myForm')
+         if (form[0].checkValidity()===false) {
+            event.preventDefault();
+            event.stopPropagation();
+         } else {
+            $('#carritoModal').modal('show');
+            event.preventDefault();
+            event.stopPropagation();
+         }
+         form.addClass('was-validated');
+      });
+
+      $(document).ready(function() {
+         $('#producto1').zoom();
+
+      });
+   </script>
   </body>
 </html>

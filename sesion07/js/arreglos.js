@@ -24,6 +24,12 @@ let nombrePaises = "";
 //console.log(nombrePaises);
 //nombrePaises = nombrePaises + ", " + "Chile";
 //console.log(nombrePaises);
+
+//Ordenar de a-z
+paises.sort();
+
+paises.reverse();
+
 for(let y=0 ; y<paises.length;y++) 
     {
      paisFila.unshift(paises[y]);

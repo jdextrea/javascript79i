@@ -14,12 +14,21 @@
         <li>Chile</li>
         <li>Brazil</li>
         <li>Argentina</li>
-    </ul>
+    </ul> <br />
+    <ol id="paises">
+
+    </ol>
     <script>
         $(document).ready(function() {
+           //Una variable para la etiqueta paises
+           let nombrePaises = $('#paises');
             let listaPaises = ["Peru","Chile","Brazil","Argentina"];
-        let nroElementos = personas.length;
+        //let nroElementos = personas.length;
 
+        //Uso del forEach
+            $.each(listaPaises,function(index,value) {
+                nombrePaises.append(`<li>${index}</li>`);
+            });
 
         });
 

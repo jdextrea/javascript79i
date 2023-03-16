@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="js/resultados.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 <body>
@@ -25,8 +26,8 @@
         });
 
             function refrescarDiv() {
-                $('#tiempo').load('#tiempo');
-                $('#resultado').load('#resultado');
+                $(document).load('#tiempo');
+                $(document).load('#resultado');
             }
 
             document.getElementById("equipoLocal").innerHTML = score.equipoLocal + " Vs " + score.equipoVisitante;

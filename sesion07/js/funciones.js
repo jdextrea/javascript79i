@@ -1,3 +1,4 @@
+//(ArbolDom).evento(funcion)
 $(document).ready(function() {
     const $select = $("#miSelect");
     

@@ -22,4 +22,8 @@ const objUsuarios = JSON.parse(Usuarios);
 
 console.log(objUsuarios.Usuarios[1].correo);
 
+//Convertir un objeto en JSON
+let usuarioSinComillas = {codigo:"c01",nombre:"jymmy",clave:"1234"};
+const usuarioJson = JSON.stringify(usuarioSinComillas);
+console.log(usuarioJson);
 

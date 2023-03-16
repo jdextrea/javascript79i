@@ -20,6 +20,7 @@ let Usuarios = '{"Usuarios":[{"codigo":"c01","correo":"jdextre@certus.edu.pe","c
 
 const objUsuarios = JSON.parse(Usuarios);
 
+//for (let x=0;x<=)
 console.log(objUsuarios.Usuarios[1].correo);
 
 //Convertir un objeto en JSON

@@ -12,5 +12,17 @@
     <div id="equipoVisitante"></div>
     <div id="tiempo"></div>
     <div id="resultado"></div>
+    <script>
+        $(document).ready(function () {
+            //Definir un tiempo que la pagina se refresque
+            let pageRefresh = 1000;
+            //Utiliza la funcion setInterval para ejecutar cada cierto una acción
+            //setInterval(pagina,tiempo)
+            setInterval(function() {
+                   refrescarDiv(); 
+            }, pageRefresh);
+
+        });
+    </script>
 </body>
 </html>
